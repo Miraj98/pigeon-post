@@ -18,7 +18,7 @@ async fn main() -> Result<(), ()> {
     println!("Collection serialization completed in ...{serialization_in}ms\n\n");
 
     let resp = runner(inputs).await;
-    let lanes = resp.len();
+    let lanes = 1;
     let _json_stream = stream::iter(resp)
         .map(|v| {
             async move {
