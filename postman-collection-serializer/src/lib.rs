@@ -26,8 +26,7 @@ pub fn serialize(input: &str) -> Result<Vec<RequestInput>, String> {
 
     let mut ret: Vec<RequestInput> = Vec::with_capacity(collection.item.len());
 
-    while collection.item.len() > 0 {
-        let mut item = collection.item.pop().unwrap();
+    for item in collection.item.iter_mut() {
         let mut headers: Vec<Header> = Vec::with_capacity(item.request.header.len() + 1);
         while item.request.header.len() > 0 {
             let h = item.request.header.pop().unwrap();
@@ -65,7 +64,7 @@ pub fn serialize(input: &str) -> Result<Vec<RequestInput>, String> {
             body = Some(item.request.body.as_ref().unwrap().to_buffer());
         }
 
-        ret.push(RequestInput::new(item.request.method, item.request.url.url_string(&var_map), headers, body));
+        ret.push(RequestInput::new(item.request.method.clone(), item.request.url.url_string(&var_map), headers, body));
     }
 
     eprintln!("{:#?}", ret);
