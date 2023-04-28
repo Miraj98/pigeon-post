@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "190a0f52-750a-4d45-99bd-76cfea4972e1",
+		"name": "Collection 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4779254"
+	},
+	"item": [
+		{
+			"name": "First req",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/trpc/hello?ok={{input_value}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"trpc",
+						"hello"
+					],
+					"query": [
+						{
+							"key": "ok",
+							"value": "{{input_value}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "secret-value",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "x-api-key",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "input_value",
+			"value": "hello world",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,1771 @@
+{
+	"info": {
+		"_postman_id": "f1776d9e-9c4a-4f14-a489-e82c7aa3c940",
+		"name": "NSHALP GPR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4779254",
+		"_collection_link": "https://getassist.postman.co/workspace/Backend-API-documentation~14864ea7-3583-43f0-86cd-280796dbb5fe/collection/4779254-f1776d9e-9c4a-4f14-a489-e82c7aa3c940?action=share&creator=4779254&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Register customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "M0em5cixFdsw0nA3W6DO8NGlDTXWYsT7rCyvy3sd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\": \"NSMEWTCUST05\",\n    \"entityType\": \"CUSTOMER\",\n    \"businessType\": \"NSHALP\",\n    \"businessId\": \"NSMEWTCUST05\",\n    \"title\": \"Mr\",\n    \"firstName\": \"Ranjith\",\n    \"lastName\": \"Gopal\",\n    \"gender\": \"MALE\",\n    \"isNRICustomer\": false,\n    \"isMinor\": false,\n    \"isDependant\": false,\n    \"maritalStatus\": \"SINGLE\",\n    \"employmentIndustry\": \"INFORMATION_TECHNOLOGY\",\n    \"employmentType\": \"EMPLOYED\",\n    \"specialDate\": \"1989-06-03\",\n    \"addressInfo\": [\n        {\n            \"addressCategory\": \"PERMANENT\",\n            \"address1\": \"N0 6 POTHIGAI APPARTMENT\",\n            \"address2\": \"INDIRA GANDHI STREET\",\n            \"address3\": \"\",\n            \"city\": \"POZHICHALUR\",\n            \"state\": \"TAMILNADU\",\n            \"country\": \"INDIA\",\n            \"pinCode\": \"600074\",\n            \"pincode\": \"600074\"\n        },\n        {\n            \"addressCategory\": \"COMMUNICATION\",\n            \"address1\": \"F2 AMPA FLATS\",\n            \"address2\": \"NSK ROAD 2ND STREET\",\n            \"address3\": \"TNAGAR\",\n            \"city\": \"CHENNAI\",\n            \"state\": \"TAMILNADU\",\n            \"country\": \"INDIA\",\n            \"pinCode\": \"600028\",\n            \"pincode\": \"604154\"\n        }\n    ],\n    \"communicationInfo\": [\n        {\n            \"contactNo\": \"+919003079767\",\n            \"notification\": true,\n            \"emailId\": \"test@bank.com\"\n        }\n    ],\n    \"kycInfo\": [\n        {\n            \"kycRefNo\": \"123456\",\n            \"documentType\": \"PAN\",\n            \"documentNo\": \"BMUPR4025F\",\n            \"documentExpiry\": \"2099-03-01\"\n        }\n    ],\n    \"dateInfo\": [\n        {\n            \"dateType\": \"DOB\",\n            \"date\": \"1989-06-03\"\n        }\n    ],\n    \"nomineeInfo\": [\n        {\n            \"nomineeName\": \"Seema\",\n            \"nomineeRelationship\": \"Wife\",\n            \"nomineeDOB\": \"1996-01-25\",\n            \"isMinor\": false,\n            \"guardianName\": null\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/customer/register",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"customer",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register customer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "M0em5cixFdsw0nA3W6DO8NGlDTXWYsT7rCyvy3sd",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"entityId\": \"NSMEWTCUST89\",\n    \"entityType\": \"CUSTOMER\",\n    \"businessType\": \"NSHALP\",\n    \"businessId\": \"NSMEWTCUST89\",\n    \"title\": \"Mr\",\n    \"firstName\": \"Ranjith\",\n    \"lastName\": \"Gopal\",\n    \"gender\": \"MALE\",\n    \"isNRICustomer\": false,\n    \"isMinor\": false,\n    \"isDependant\": false,\n    \"maritalStatus\": \"SINGLE\",\n    \"employmentIndustry\": \"INFORMATION_TECHNOLOGY\",\n    \"employmentType\": \"EMPLOYED\",\n    \"specialDate\": \"1989-06-03\",\n    \"addressInfo\": [\n        {\n            \"addressCategory\": \"PERMANENT\",\n            \"address1\": \"N0 6 POTHIGAI APPARTMENT\",\n            \"address2\": \"INDIRA GANDHI STREET\",\n            \"address3\": \"\",\n            \"city\": \"POZHICHALUR\",\n            \"state\": \"TAMILNADU\",\n            \"country\": \"INDIA\",\n            \"pinCode\": \"600074\",\n            \"pincode\": \"600074\"\n        },\n        {\n            \"addressCategory\": \"COMMUNICATION\",\n            \"address1\": \"F2 AMPA FLATS\",\n            \"address2\": \"NSK ROAD 2ND STREET\",\n            \"address3\": \"TNAGAR\",\n            \"city\": \"CHENNAI\",\n            \"state\": \"TAMILNADU\",\n            \"country\": \"INDIA\",\n            \"pinCode\": \"600028\",\n            \"pincode\": \"604154\"\n        }\n    ],\n    \"communicationInfo\": [\n        {\n            \"contactNo\": \"+919111079767\",\n            \"notification\": true,\n            \"emailId\": \"test@bank.com\"\n        }\n    ],\n    \"kycInfo\": [\n        {\n            \"kycRefNo\": \"123456\",\n            \"documentType\": \"PAN\",\n            \"documentNo\": \"BMUPR4025F\",\n            \"documentExpiry\": \"2099-03-01\"\n        }\n    ],\n    \"dateInfo\": [\n        {\n            \"dateType\": \"DOB\",\n            \"date\": \"1989-06-03\"\n        }\n    ],\n    \"nomineeInfo\": [\n        {\n            \"nomineeName\": \"Seema\",\n            \"nomineeRelationship\": \"Wife\",\n            \"nomineeDOB\": \"1996-01-25\",\n            \"isMinor\": false,\n            \"guardianName\": null\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/card/customer/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"card",
+								"customer",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 22 Mar 2023 11:41:40 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "251"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "42e98ce9-a958-4fcc-95dc-e70af04e4a39"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "x-amzn-Remapped-Content-Length",
+							"value": "251"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "CLlqGEo4hcwFqBw="
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-641ae973-35f374a6180448b54662772f;Sampled=0"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"SUCCESS\",\n    \"sCode\": 200,\n    \"body\": {\n        \"result\": {\n            \"entityId\": \"NSMEWTCUST89\",\n            \"kycStatus\": \"PENDING\",\n            \"kycRefNo\": \"NSMEWT0233817002260319\",\n            \"valid\": false\n        },\n        \"exception\": null,\n        \"pagination\": null,\n        \"kitNo\": \"6110000549\"\n    },\n    \"message\": \"successfully registered customer\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Dedupe mob",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "M0em5cixFdsw0nA3W6DO8NGlDTXWYsT7rCyvy3sd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\":\"NSMEWTCUST05\",\n    \"contactNo\":\"+919003079767\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/customer/dedup-check",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"customer",
+						"dedup-check"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Dedupe mob",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "M0em5cixFdsw0nA3W6DO8NGlDTXWYsT7rCyvy3sd",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"entityId\":\"NSMEWTCUST60\",\n    \"contactNo\":\"+919003123823\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://staging.api.mewt.in/card/customer/dedup-check",
+							"protocol": "https",
+							"host": [
+								"staging",
+								"api",
+								"mewt",
+								"in"
+							],
+							"path": [
+								"card",
+								"customer",
+								"dedup-check"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 21 Mar 2023 14:42:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "474bc022-0bf3-4805-88b0-47826f6519f6"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "x-amzn-Remapped-Content-Length",
+							"value": "212"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "CItJmF4XhcwFVjA="
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-6419c23d-23ed777d0ea901054fa3357d;Sampled=0"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"SUCCESS\",\n    \"sCode\": 200,\n    \"body\": {\n        \"result\": {\n            \"message\": \"Mobileno is not registered with Bank.\",\n            \"status\": \"NOT_EXISTS\"\n        },\n        \"exception\": null,\n        \"pagination\": null\n    },\n    \"message\": \"duplication check performed successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "pan validation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "M0em5cixFdsw0nA3W6DO8NGlDTXWYsT7rCyvy3sd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\": \"NSMEWTCUST05\",\n    \"idNumber\": \"CCRPP1865K\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/customer/validate-pan/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"customer",
+						"validate-pan",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "initiate kyc otp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "M0em5cixFdsw0nA3W6DO8NGlDTXWYsT7rCyvy3sd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\": \"NSMEWTCUST05\",\n    \"contactNo\": \"+919003079767\",\n    \"kycVerifyType\": \"AOTP\",\n    \"idNumber\": \"BMUPR4025F\",\n    \"custPanName\": \"Ranjith Gopal\",\n    \"redirectUrl\": \"https://test2.rediret.com/\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/customer/initiate-kyc",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"customer",
+						"initiate-kyc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add card request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "M0em5cixFdsw0nA3W6DO8NGlDTXWYsT7rCyvy3sd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\": \"NSMEWTCUST05\",\n    \"cardType\": \"V\",\n    \"business\": \"NSMEWT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/management/add-card",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"management",
+						"add-card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Masked card List",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "M0em5cixFdsw0nA3W6DO8NGlDTXWYsT7rCyvy3sd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\": \"NSMEWTCUST05\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/management/get-card-list",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"management",
+						"get-card-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lock / Unlock card",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "M0em5cixFdsw0nA3W6DO8NGlDTXWYsT7rCyvy3sd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\": \"NSMEWTCUST123\",\n    \"kitNo\": \"6110000540\",\n    \"flag\": \"L\",\n    \"reason\": \"Test Lock Card\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/management/lock-unlock-card",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"management",
+						"lock-unlock-card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "M0em5cixFdsw0nA3W6DO8NGlDTXWYsT7rCyvy3sd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\": \"NSMEWTCUST05\",\n    \"emailAddress\": \"nsdlpbtest2@m2p.in\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/customer/update-entity",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"customer",
+						"update-entity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Replace card",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "M0em5cixFdsw0nA3W6DO8NGlDTXWYsT7rCyvy3sd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\": \"NSMEWTCUST05\",\n    \"oldKitNo\": \"6110000120\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/management/replace-card",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"management",
+						"replace-card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Preference",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\": \"NSMEWTCUST01\",\n    \"atm\":false,\n    \"pos\": true,\n    \"ecom\": false,\n    \"dcc\": false,\n    \"contactless\": false,\n    \"international\": false\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/management/customer-preference",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"management",
+						"customer-preference"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Preference",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\": \"NSMEWTCUST05\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/management/fetch-preference",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"management",
+						"fetch-preference"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request Physical Card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\": \"NSMEWTCUST05\",\n    \"kitNo\": \"6110000120\",\n    \"addressDto\": {\n        \"address\": [\n            {\n                \"title\": \"DELIVERY\",\n                \"address1\": \"My Myaddress1 - M2P\",\n                \"address2\": \"My Myaddress2 - Solutions\",\n                \"city\": \"Chennai\",\n                \"state\": \"TN\",\n                \"country\": \"India\",\n                \"pinCode\": \"600016\",\n                \"aliasName\": \"RAJAN\"\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/management/request-physical-card",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"management",
+						"request-physical-card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Card Pin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"kitNo\": \"6110000120\",\n    \"entityId\": \"NSMEWTCUST05\",\n    \"callbackUrl\": \"https://www.google.com\",\n    \"dob\": \"09012019\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/management/set-card-pin",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"management",
+						"set-card-pin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Card Details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\": \"GsAC6Yxn25VB7S4pNbSYV8Gs8pfLSXQ1mhmVRMH76KFkl5SpldW6tgNoVLXxrg2RCvDJjfLBjcinRSz963DFGMFpNCnhx31VqXU51xTFyGO3VccWWG3epyfaahOmW2CDpKh60h4qj63EU8E3gXEsv2A6Tlg7K0qHn02tvygk=\",\n    \"kitNo\": \"6110000120\",\n    \"entityId\": \"NSMEWTCUST05\",\n    \"appGuid\": \"123dase\",\n    \"business\": \"NSMEWT\",\n    \"callbackUrl\": \"https://www.google.com\",\n    \"dob\": \"09012019\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/management/get-card-details",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"management",
+						"get-card-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\":\"NSMEWTCUST05\",\n    \"mobileNumber\":\"+919003079767\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/customer/generate-otp",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"customer",
+						"generate-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upi collection link",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\":\"NSMEWTCUST05\",\n    \"amount\":\"200\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/payment/upi-collection-link",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"payment",
+						"upi-collection-link"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "upi collection link received",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"entityId\":\"NSMEWTCUST05\",\n    \"amount\":\"200\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/card/payment/upi-collection-link",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"card",
+								"payment",
+								"upi-collection-link"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 18 Mar 2023 14:27:19 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.16"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "djdt-store-id",
+							"value": "de6ffb62d17647bfb27973007ccb9088"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "TimerPanel_utime;dur=23.213999999999956;desc=\"User CPU time\", TimerPanel_stime;dur=5.871000000000015;desc=\"System CPU time\", TimerPanel_total;dur=29.084999999999972;desc=\"Total CPU time\", TimerPanel_total_time;dur=33.780813217163086;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0;desc=\"SQL 0 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"200\",\n    \"url\": \"upi://pay?cu=INR&pa=mewt_upi_id&pn=bene_name&am=200&tn=NSMEWTCUST05\"\n}"
+				}
+			]
+		},
+		{
+			"name": "p2p transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sender\":\"NSMEWTCUST01\",\n    \"receiver\":\"NSMEWTCUST02\",\n    \"amount\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/payment/p2p/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"payment",
+						"p2p",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "p2p transaction success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sender\":\"NSMEWTCUST01\",\n    \"receiver\":\"NSMEWTCUST02\",\n    \"amount\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/card/payment/p2p/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"card",
+								"payment",
+								"p2p",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 06 Apr 2023 11:02:04 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "206"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "03edc298-8b17-4b14-8ebc-27b2b79588d1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "x-amzn-Remapped-Content-Length",
+							"value": "206"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "C876-FcPhcwFsEQ="
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-642ea6ac-364436012d5204a81265f59f;Sampled=0"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"SUCCESS\",\n    \"sCode\": 200,\n    \"message\": \"Successfully transferred 1.0\",\n    \"body\": {\n        \"utr\": \"9162539770\",\n        \"sender\": \"NSMEWTCUST01\",\n        \"receiver\": \"NSMEWTCUST02\",\n        \"amount\": 1,\n        \"timeStamp\": \"2023-04-06T11:02:04.706873Z\"\n    }\n}"
+				},
+				{
+					"name": "p2p transaction failure",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sender\":\"NSMEWTCUST01\",\n    \"receiver\":\"NSMEWTCUST02\",\n    \"amount\": 1000000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/card/payment/p2p/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"card",
+								"payment",
+								"p2p",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 06 Apr 2023 11:03:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "93"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "9c967c40-68f3-42d6-93ec-08e75401df45"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "x-amzn-Remapped-Content-Length",
+							"value": "93"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "C88HyFwEBcwFXCA="
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-642ea6fe-1822dc7d5f891b411a850083;Sampled=0"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"ERROR\",\n    \"sCode\": 400,\n    \"message\": \"Transaction failed because of insufficient balance\"\n}"
+				},
+				{
+					"name": "p2p transaction failure",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sender\":\"NSMEWTCUST01\",\n    \"receiver\":\"NSMCUST02\",\n    \"amount\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/card/payment/p2p/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"card",
+								"payment",
+								"p2p",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 06 Apr 2023 12:13:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "d7cd2ed7-bd42-4c4d-ae5c-128fff85e3a1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "x-amzn-Remapped-Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "C9GUxHGyhcwFfSg="
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-642eb751-554f23927f348e485a8733cc;Sampled=0"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"ERROR\",\n    \"message\": \"Entity does not exist\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Check balance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\":\"NSMEWTCUST01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/payment/balance",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"payment",
+						"balance"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Check balance success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"entityId\":\"NSMEWTCUST01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/card/payment/balance",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"card",
+								"payment",
+								"balance"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 06 Apr 2023 05:31:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "e9b2c59a-0e8e-4baa-97c1-2901d6e49a0b"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "x-amzn-Remapped-Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "C8LgwHKrhcwFvoA="
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-642e5937-1e4831ac4a39b268380d6275;Sampled=0"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"SUCCESS\",\n    \"sCode\": 200,\n    \"body\": {\n        \"balance\": 1064.2\n    }\n}"
+				},
+				{
+					"name": "Check balance failure",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"entityId\":\"NSMEWTCT01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/card/payment/balance",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"card",
+								"payment",
+								"balance"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 06 Apr 2023 12:13:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "a2a94183-d944-4a20-9f7b-9bfa72a77d7b"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "x-amzn-Remapped-Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "C9GZgF62BcwFvnA="
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-642eb76f-5bcb47b57a19ccd1426aa358;Sampled=0"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"ERROR\",\n    \"message\": \"Entity does not exist\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Transaction Info",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityId\":\"NSMEWTCUST01\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/payment/transaction",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"payment",
+						"transaction"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Transaction Info",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"entityId\":\"NSMEWTCUST01\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/card/payment/transaction",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"card",
+								"payment",
+								"transaction"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 06 Apr 2023 05:31:58 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7290"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "a7a14636-b0fd-460e-95a1-7d9db8def65f"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "x-amzn-Remapped-Content-Length",
+							"value": "7290"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "C8LkMES_hcwFaUw="
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-642e594d-6ca7e4b23794660513a082c2;Sampled=0"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"SUCCESS\",\n    \"sCode\": 200,\n    \"data\": {\n        \"cardTransactions\": [],\n        \"upiCollections\": [\n            {\n                \"sender\": \"12345\",\n                \"receiver\": \"NSMEWTCUST01\",\n                \"transferAmount\": 2000,\n                \"timestamp\": \"2023-03-14T12:27:02.678261Z\",\n                \"utr\": \"CYJJHJVBJ\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"12345\",\n                \"receiver\": \"NSMEWTCUST01\",\n                \"transferAmount\": 100,\n                \"timestamp\": \"2023-03-14T12:27:02.678261Z\",\n                \"utr\": \"CYJJHJVGJ\",\n                \"paymentMode\": \"UPI\"\n            }\n        ],\n        \"p2p\": [\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"NSMEWTCUST02\",\n                \"transferAmount\": 2,\n                \"timestamp\": \"2023-04-06T05:29:36.246399Z\",\n                \"utr\": \"1687460012\",\n                \"paymentMode\": \"P2P\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"NSMEWTCUST02\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T12:45:49.227958Z\",\n                \"utr\": \"2054435592\",\n                \"paymentMode\": \"P2P\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"NSMEWTCUST02\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T12:43:03.289212Z\",\n                \"utr\": \"1359325190\",\n                \"paymentMode\": \"P2P\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"NSMEWTCUST02\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T12:41:56.547075Z\",\n                \"utr\": \"1357375814\",\n                \"paymentMode\": \"P2P\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"NSMEWTCUST02\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T04:49:23.808816Z\",\n                \"utr\": \"0634848301\",\n                \"paymentMode\": \"P2P\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST02\",\n                \"receiver\": \"NSMEWTCUST01\",\n                \"transferAmount\": 9,\n                \"timestamp\": \"2023-04-04T08:11:33.699094Z\",\n                \"utr\": \"6451619206\",\n                \"paymentMode\": \"P2P\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"NSMEWTCUST02\",\n                \"transferAmount\": 2.6,\n                \"timestamp\": \"2023-04-03T08:05:37.307910Z\",\n                \"utr\": \"4859871624\",\n                \"paymentMode\": \"P2P\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"NSMEWTCUST02\",\n                \"transferAmount\": 5,\n                \"timestamp\": \"2023-03-30T04:11:38.671815Z\",\n                \"utr\": \"4019031003\",\n                \"paymentMode\": \"P2P\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"NSMEWTCUST02\",\n                \"transferAmount\": 15,\n                \"timestamp\": \"2023-03-24T08:30:42.276340Z\",\n                \"utr\": \"6708896159\",\n                \"paymentMode\": \"P2P\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"NSMEWTCUST02\",\n                \"transferAmount\": 100,\n                \"timestamp\": \"2023-03-24T08:19:36.911254Z\",\n                \"utr\": \"9733470105\",\n                \"paymentMode\": \"P2P\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"NSMEWTCUST02\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-03-24T07:30:57.595124Z\",\n                \"utr\": \"4916401519\",\n                \"paymentMode\": \"P2P\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"NSMEWTCUST02\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-03-24T07:30:42.715290Z\",\n                \"utr\": \"3301816333\",\n                \"paymentMode\": \"P2P\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"NSMEWTCUST02\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-03-23T20:32:14.273171Z\",\n                \"utr\": \"7429464268\",\n                \"paymentMode\": \"P2P\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"NSMEWTCUST02\",\n                \"transferAmount\": 5,\n                \"timestamp\": \"2023-03-23T12:18:29.048968Z\",\n                \"utr\": \"2776848919\",\n                \"paymentMode\": \"P2P\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"NSMEWTCUST02\",\n                \"transferAmount\": 50,\n                \"timestamp\": \"2023-03-22T13:39:34.737094Z\",\n                \"utr\": \"2955694381\",\n                \"paymentMode\": \"P2P\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"NSMEWTCUST02\",\n                \"transferAmount\": 88,\n                \"timestamp\": \"2023-03-22T13:33:32.214802Z\",\n                \"utr\": \"0076891644\",\n                \"paymentMode\": \"P2P\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST02\",\n                \"receiver\": \"NSMEWTCUST01\",\n                \"transferAmount\": 21,\n                \"timestamp\": \"2023-03-22T13:23:56.669230Z\",\n                \"utr\": \"4326316918\",\n                \"paymentMode\": \"P2P\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST02\",\n                \"receiver\": \"NSMEWTCUST01\",\n                \"transferAmount\": 12,\n                \"timestamp\": \"2023-03-22T13:11:13.628888Z\",\n                \"utr\": \"1589046147\",\n                \"paymentMode\": \"P2P\"\n            }\n        ],\n        \"p2e\": [\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"62140346797\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T13:31:33.684079Z\",\n                \"utr\": \"2c8d7e15d3b611ed9640\",\n                \"paymentMode\": \"IMPS\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"8897463981@ybl\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T13:31:30.328252Z\",\n                \"utr\": \"2905af72d3b611ed9a20\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"62140346797\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T13:14:23.985425Z\",\n                \"utr\": \"c6e51de5d3b311ed9248\",\n                \"paymentMode\": \"IMPS\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"8897463981@ybl\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T13:13:45.804882Z\",\n                \"utr\": \"af756cced3b311ed883b\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"8897463981@ybl\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T12:51:10.202140Z\",\n                \"utr\": \"8700db4ed3b011edb7e9\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"62140346797\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T12:24:51.336026Z\",\n                \"utr\": \"dae432abd3ac11ed8ab2\",\n                \"paymentMode\": \"IMPS\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"8897463981@ybl\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T12:24:46.345822Z\",\n                \"utr\": \"d6f6bf25d3ac11edb468\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"62140346797\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T12:17:43.407463Z\",\n                \"utr\": \"dbd57a09d3ab11ed9a48\",\n                \"paymentMode\": \"IMPS\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"8897463981@ybl\",\n                \"transferAmount\": 1.1,\n                \"timestamp\": \"2023-04-05T12:17:39.919897Z\",\n                \"utr\": \"d92d96cad3ab11ed90e4\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"62140346797\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T12:14:14.456528Z\",\n                \"utr\": \"5f6f6efad3ab11ed912f\",\n                \"paymentMode\": \"IMPS\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"8897463981@ybl\",\n                \"transferAmount\": 1.1,\n                \"timestamp\": \"2023-04-05T12:14:09.126015Z\",\n                \"utr\": \"5bb30c8bd3ab11ed9d53\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"62140346797\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T11:48:16.671894Z\",\n                \"utr\": \"be5c2460d3a711ed84d4\",\n                \"paymentMode\": \"IMPS\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"8897463981@ybl\",\n                \"transferAmount\": 1.1,\n                \"timestamp\": \"2023-04-05T11:44:39.995884Z\",\n                \"utr\": \"3d676f7cd3a711ed84d4\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"8897463981@ybl\",\n                \"transferAmount\": 1.2,\n                \"timestamp\": \"2023-04-05T11:37:46.903912Z\",\n                \"utr\": \"473e01e2d3a611ed9768\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"nitheshvatti@ybl\",\n                \"transferAmount\": 1.2,\n                \"timestamp\": \"2023-04-05T08:04:49.346866Z\",\n                \"utr\": \"86922602d38811ed99bf\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"ybl\",\n                \"transferAmount\": 1.2,\n                \"timestamp\": \"2023-04-05T08:04:28.773020Z\",\n                \"utr\": \"7bc7c4fcd38811ed99bf\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"ybl\",\n                \"transferAmount\": 1.2,\n                \"timestamp\": \"2023-04-05T08:02:16.595083Z\",\n                \"utr\": \"2ceda932d38811ed98a5\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"9676156671@ybl\",\n                \"transferAmount\": 1.2,\n                \"timestamp\": \"2023-04-05T07:59:08.520014Z\",\n                \"utr\": \"bbd5ad94d38711ed98a5\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"9676156671@ybl\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T07:48:46.010612Z\",\n                \"utr\": \"488e4f36d38611edab25\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"8897463981@ybl\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T07:47:55.202356Z\",\n                \"utr\": \"2a1b387ad38611ed8836\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"8897463981@ybl\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T07:47:22.819464Z\",\n                \"utr\": \"172d011cd38611ed8ffd\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"8897463981@ybl\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T07:45:15.769941Z\",\n                \"utr\": \"cb13acd6d38511eda04c\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"8897463981@ybl\",\n                \"transferAmount\": 1,\n                \"timestamp\": \"2023-04-05T04:23:36.327294Z\",\n                \"utr\": \"9fe83944d36911edaf52\",\n                \"paymentMode\": \"UPI\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"62140346797\",\n                \"transferAmount\": 1.5,\n                \"timestamp\": \"2023-04-04T09:36:45.629944Z\",\n                \"utr\": \"3484807ed2cc11ed8ff2\",\n                \"paymentMode\": \"IMPS\"\n            },\n            {\n                \"sender\": \"NSMEWTCUST01\",\n                \"receiver\": \"8897463981@ybl\",\n                \"transferAmount\": 1.1,\n                \"timestamp\": \"2023-04-04T09:34:12.374508Z\",\n                \"utr\": \"d7393de2d2cb11ed8ff2\",\n                \"paymentMode\": \"UPI\"\n            }\n        ]\n    }\n}"
+				},
+				{
+					"name": "Transaction Info failure",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"entityId\":\"NSMEWTCU1\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/card/payment/transaction",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"card",
+								"payment",
+								"transaction"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 06 Apr 2023 12:13:47 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "1eec2542-aa45-43dd-9bd1-d11d9e2a4989"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "x-amzn-Remapped-Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "C9GbVFzTBcwFthw="
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-642eb77b-0d71ff137e3875ef0c23758f;Sampled=0"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"ERROR\",\n    \"message\": \"Entity does not exist\"\n}"
+				}
+			]
+		},
+		{
+			"name": "p2p transactions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entity_id_1\": \"NSMEWTCUST01\",\n    \"entity_id_2\": \"NSMEWTCUST02\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/card/payment/p2p-transactions",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"card",
+						"payment",
+						"p2p-transactions"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "p2p transactions",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"entity_id_1\": \"NSMEWTCUST01\",\n    \"entity_id_2\": \"NSMEWTCUST02\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/card/payment/p2p-transactions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"card",
+								"payment",
+								"p2p-transactions"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 06 Apr 2023 05:32:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2820"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "a09b3ef8-83e7-433d-a7ce-a0938b586437"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "x-amzn-Remapped-Content-Length",
+							"value": "2820"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "C8LohFuiBcwFuxw="
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-642e5969-48575db04b4f96017abfe93b;Sampled=0"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"SUCCESS\",\n    \"sCode\": 200,\n    \"data\": [\n        {\n            \"sender\": \"NSMEWTCUST02\",\n            \"receiver\": \"NSMEWTCUST01\",\n            \"transferAmount\": 12,\n            \"timestamp\": \"2023-03-22T13:11:13.628888Z\",\n            \"utr\": \"1589046147\",\n            \"paymentMode\": \"P2P\"\n        },\n        {\n            \"sender\": \"NSMEWTCUST02\",\n            \"receiver\": \"NSMEWTCUST01\",\n            \"transferAmount\": 21,\n            \"timestamp\": \"2023-03-22T13:23:56.669230Z\",\n            \"utr\": \"4326316918\",\n            \"paymentMode\": \"P2P\"\n        },\n        {\n            \"sender\": \"NSMEWTCUST01\",\n            \"receiver\": \"NSMEWTCUST02\",\n            \"transferAmount\": 88,\n            \"timestamp\": \"2023-03-22T13:33:32.214802Z\",\n            \"utr\": \"0076891644\",\n            \"paymentMode\": \"P2P\"\n        },\n        {\n            \"sender\": \"NSMEWTCUST01\",\n            \"receiver\": \"NSMEWTCUST02\",\n            \"transferAmount\": 50,\n            \"timestamp\": \"2023-03-22T13:39:34.737094Z\",\n            \"utr\": \"2955694381\",\n            \"paymentMode\": \"P2P\"\n        },\n        {\n            \"sender\": \"NSMEWTCUST01\",\n            \"receiver\": \"NSMEWTCUST02\",\n            \"transferAmount\": 5,\n            \"timestamp\": \"2023-03-23T12:18:29.048968Z\",\n            \"utr\": \"2776848919\",\n            \"paymentMode\": \"P2P\"\n        },\n        {\n            \"sender\": \"NSMEWTCUST01\",\n            \"receiver\": \"NSMEWTCUST02\",\n            \"transferAmount\": 1,\n            \"timestamp\": \"2023-03-23T20:32:14.273171Z\",\n            \"utr\": \"7429464268\",\n            \"paymentMode\": \"P2P\"\n        },\n        {\n            \"sender\": \"NSMEWTCUST01\",\n            \"receiver\": \"NSMEWTCUST02\",\n            \"transferAmount\": 1,\n            \"timestamp\": \"2023-03-24T07:30:42.715290Z\",\n            \"utr\": \"3301816333\",\n            \"paymentMode\": \"P2P\"\n        },\n        {\n            \"sender\": \"NSMEWTCUST01\",\n            \"receiver\": \"NSMEWTCUST02\",\n            \"transferAmount\": 1,\n            \"timestamp\": \"2023-03-24T07:30:57.595124Z\",\n            \"utr\": \"4916401519\",\n            \"paymentMode\": \"P2P\"\n        },\n        {\n            \"sender\": \"NSMEWTCUST01\",\n            \"receiver\": \"NSMEWTCUST02\",\n            \"transferAmount\": 100,\n            \"timestamp\": \"2023-03-24T08:19:36.911254Z\",\n            \"utr\": \"9733470105\",\n            \"paymentMode\": \"P2P\"\n        },\n        {\n            \"sender\": \"NSMEWTCUST01\",\n            \"receiver\": \"NSMEWTCUST02\",\n            \"transferAmount\": 15,\n            \"timestamp\": \"2023-03-24T08:30:42.276340Z\",\n            \"utr\": \"6708896159\",\n            \"paymentMode\": \"P2P\"\n        },\n        {\n            \"sender\": \"NSMEWTCUST01\",\n            \"receiver\": \"NSMEWTCUST02\",\n            \"transferAmount\": 5,\n            \"timestamp\": \"2023-03-30T04:11:38.671815Z\",\n            \"utr\": \"4019031003\",\n            \"paymentMode\": \"P2P\"\n        },\n        {\n            \"sender\": \"NSMEWTCUST01\",\n            \"receiver\": \"NSMEWTCUST02\",\n            \"transferAmount\": 2.6,\n            \"timestamp\": \"2023-04-03T08:05:37.307910Z\",\n            \"utr\": \"4859871624\",\n            \"paymentMode\": \"P2P\"\n        },\n        {\n            \"sender\": \"NSMEWTCUST02\",\n            \"receiver\": \"NSMEWTCUST01\",\n            \"transferAmount\": 9,\n            \"timestamp\": \"2023-04-04T08:11:33.699094Z\",\n            \"utr\": \"6451619206\",\n            \"paymentMode\": \"P2P\"\n        },\n        {\n            \"sender\": \"NSMEWTCUST01\",\n            \"receiver\": \"NSMEWTCUST02\",\n            \"transferAmount\": 1,\n            \"timestamp\": \"2023-04-05T04:49:23.808816Z\",\n            \"utr\": \"0634848301\",\n            \"paymentMode\": \"P2P\"\n        },\n        {\n            \"sender\": \"NSMEWTCUST01\",\n            \"receiver\": \"NSMEWTCUST02\",\n            \"transferAmount\": 1,\n            \"timestamp\": \"2023-04-05T12:41:56.547075Z\",\n            \"utr\": \"1357375814\",\n            \"paymentMode\": \"P2P\"\n        },\n        {\n            \"sender\": \"NSMEWTCUST01\",\n            \"receiver\": \"NSMEWTCUST02\",\n            \"transferAmount\": 1,\n            \"timestamp\": \"2023-04-05T12:43:03.289212Z\",\n            \"utr\": \"1359325190\",\n            \"paymentMode\": \"P2P\"\n        },\n        {\n            \"sender\": \"NSMEWTCUST01\",\n            \"receiver\": \"NSMEWTCUST02\",\n            \"transferAmount\": 1,\n            \"timestamp\": \"2023-04-05T12:45:49.227958Z\",\n            \"utr\": \"2054435592\",\n            \"paymentMode\": \"P2P\"\n        },\n        {\n            \"sender\": \"NSMEWTCUST01\",\n            \"receiver\": \"NSMEWTCUST02\",\n            \"transferAmount\": 2,\n            \"timestamp\": \"2023-04-06T05:29:36.246399Z\",\n            \"utr\": \"1687460012\",\n            \"paymentMode\": \"P2P\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "p2p transactions failure",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"entity_id_1\": \"NSMEWTCUST01\",\n    \"entity_id_2\": \"NSWTCUST02\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/card/payment/p2p-transactions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"card",
+								"payment",
+								"p2p-transactions"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 06 Apr 2023 12:18:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "d62ba8cf-867e-4ce2-8a52-480e0ef48f89"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "x-amzn-Remapped-Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "C9HEFGvSBcwFriA="
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-642eb880-038fcd8c26824dae721f457a;Sampled=0"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"ERROR\",\n    \"message\": \"Entity does not exist\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "x-api-key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "M0em5cixFdsw0nA3W6DO8NGlDTXWYsT7rCyvy3sd",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "http://127.0.0.1:8020/"
+		},
+		{
+			"key": "base_url",
+			"value": "https://staging.api.mewt.in"
+		}
+	]
+}
