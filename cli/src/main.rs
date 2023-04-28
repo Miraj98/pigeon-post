@@ -1,10 +1,14 @@
 use postman_collection_serializer::serialize;
 use runtime::runner;
 use futures::{stream, StreamExt};
+use std::env;
 
 #[tokio::main]
 async fn main() -> Result<(), ()> {
-    let inputs = serialize("/Users/mirajshah/Downloads/college-cms.json").unwrap();
+    let args: Vec<String> = env::args().collect();
+    let file_path = &args[0];
+
+    let inputs = serialize(file_path.as_str()).unwrap();
     let resp = runner(inputs).await;
     let _json_stream = stream::iter(resp)
         .map(|v| {
