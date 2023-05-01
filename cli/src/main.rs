@@ -11,10 +11,9 @@ async fn main() -> Result<(), ()> {
     let file_path = &args[1];
 
     let start = Instant::now();
-
     let inputs = serialize(file_path.as_str()).unwrap();
-
     let serialization_in = start.elapsed().as_millis();
+
     println!("Collection serialization completed in ...{serialization_in}ms\n\n");
 
     let resp = runner(inputs).await;
@@ -30,7 +29,7 @@ async fn main() -> Result<(), ()> {
                         let url = resp.url().to_string();
                         let json = resp.json::<Value>().await;
                         let time_taken = start.elapsed().as_millis();
-
+                        
                         println!("{} ...{}", "Success".green().bold(), status);
                         println!("URL: {url}");
                         println!("  ...request completed in {}ms", v.time_taken);
