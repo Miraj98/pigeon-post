@@ -2,30 +2,22 @@ mod structs;
 
 use std::time::Instant;
 use futures::{ stream, StreamExt };
-use reqwest::{ header::{ HeaderMap, HeaderName, HeaderValue, CONTENT_TYPE }, Error };
-use serde_json::Value;
+use reqwest::header::{ HeaderMap, HeaderName, HeaderValue, CONTENT_TYPE };
+pub use crate::structs::{ Runtime, RequestInput, Response, Header };
 
-pub use crate::structs::{ RequestInput, Header };
+impl Runtime {
+    pub fn new() -> Self {
+        Self { client: reqwest::Client::new() }
+    }
 
-
-#[derive(Debug)]
-pub struct RunnerResponse {
-    pub time_taken: u128,
-    pub response: Result<Value, Error>
-}
-
-pub async fn runner(input: Vec<RequestInput>) -> Vec<Result<RunnerResponse, ()>> {
-    let client = reqwest::Client::new();
-    let lanes = input.len();
-    let resp_stream = stream::iter(input).map(|mut r| {
-        let mut req = match r.method.as_str() {
-           "GET" => client.get(&r.url),
-            "POST" => client.post(&r.url),
-            _ => unimplemented!("[{}] request type is not yet implemented", r.method)
+    fn make_req(&self, input: &mut RequestInput) -> reqwest::RequestBuilder {
+        let mut req = match input.method.as_str() {
+           "GET" => self.client.get(&input.url),
+            "POST" => self.client.post(&input.url),
+            _ => unimplemented!("[{}] request type is not yet implemented", input.method)
         };
-        
         let mut headers = HeaderMap::new();
-        for h in r.headers.iter() {
+        for h in input.headers.iter() {
             let h_name = h
                 .key
                 .parse::<HeaderName>()
@@ -39,24 +31,39 @@ pub async fn runner(input: Vec<RequestInput>) -> Vec<Result<RunnerResponse, ()>>
             headers.insert(h_name, h_value);
         }
         headers.insert(CONTENT_TYPE, HeaderValue::from_str("application/json").unwrap());
-        if r.body.is_some() {
-            req = req.body(r.body.take().unwrap());
+        if input.body.is_some() {
+            req = req.body(input.body.take().unwrap());
         }
 
-        async move {
-            let now = Instant::now();
-            let response = req
-                .send()
-                .await
-                .map_err(|err| eprintln!("[ERROR] {} {} failed: {err}", r.method, r.url))?
-                .json::<Value>()
-                .await;
-            let time_taken = now.elapsed().as_millis();
-            Ok::<_, ()>(RunnerResponse { response, time_taken })
-        }
-    }).buffer_unordered(lanes);
+        req
 
-    let results = resp_stream.collect::<Vec<_>>().await;
-    results
+    }
+
+    pub async fn send(&self, mut input: RequestInput) -> Response {
+        let req = self.make_req(&mut input);
+        let now = Instant::now();
+        let response = req.send().await;
+        let time_taken = now.elapsed().as_millis();
+        Response { response, time_taken }
+    }
+
+    pub async fn send_multiple(&self, input: Vec<RequestInput>) -> Vec<Response> {
+        let lanes = input.len();
+        let results = stream::iter(input)
+            .map(|mut r| {
+                let req = self.make_req(&mut r);
+                async move {
+                    let now = Instant::now();
+                    let response = req.send().await;
+                    let time_taken = now.elapsed().as_millis();
+                    Response { response, time_taken }
+                }
+            })
+            .buffer_unordered(lanes)
+            .collect::<Vec<_>>()
+            .await;
+        
+        results
+    }
 }
 

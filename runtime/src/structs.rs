@@ -1,5 +1,15 @@
 use serde::Deserialize;
 
+pub struct Runtime {
+    pub(crate) client: reqwest::Client
+}
+
+#[derive(Debug)]
+pub struct Response {
+    pub time_taken: u128,
+    pub response: Result<reqwest::Response, reqwest::Error>,
+}
+
 #[derive(Deserialize, Debug)]
 pub struct RequestInput {
     pub method: String,
@@ -88,4 +98,5 @@ impl RequestInputBuilder {
         RequestInput::new(self.method, self.url, self.headers, self.body)
     }
 }
+
 
