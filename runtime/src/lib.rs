@@ -31,6 +31,8 @@ impl Runtime {
             headers.insert(h_name, h_value);
         }
         headers.insert(CONTENT_TYPE, HeaderValue::from_str("application/json").unwrap());
+        req = req.headers(headers);
+
         if input.body.is_some() {
             req = req.body(input.body.take().unwrap());
         }
