@@ -83,5 +83,9 @@ impl RequestInputBuilder {
         self.body = Some(buf);
         self
     }
+
+    pub fn build(self) -> RequestInput {
+        RequestInput::new(self.method, self.url, self.headers, self.body)
+    }
 }
 
