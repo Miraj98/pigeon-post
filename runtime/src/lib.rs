@@ -1,11 +1,11 @@
-mod core;
+mod structs;
 
 use std::time::Instant;
-use futures::{stream, StreamExt};
-use reqwest::{header::{HeaderMap, HeaderName, HeaderValue, CONTENT_TYPE}, Error, blocking};
+use futures::{ stream, StreamExt };
+use reqwest::{ header::{ HeaderMap, HeaderName, HeaderValue, CONTENT_TYPE }, Error };
 use serde_json::Value;
 
-pub use crate::core::{RequestInput, Header};
+pub use crate::structs::{ RequestInput, Header };
 
 
 #[derive(Debug)]
