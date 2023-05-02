@@ -67,8 +67,6 @@ pub fn serialize(input: &str) -> Result<Vec<RequestInput>, String> {
         ret.push(RequestInput::new(item.request.method.clone(), item.request.url.url_string(&var_map), headers, body));
     }
 
-    eprintln!("{:#?}", ret);
-
     Ok(ret)
 }
 

@@ -10,3 +10,4 @@ reqwest = { version = "0.11", features = ["json", "blocking"] }
 tokio = { version = "1.28", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }
 futures = "0.3.28"
+serde_json = "1.0.96"
