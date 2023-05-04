@@ -1,60 +1,48 @@
-use gtk::{ prelude::*, glib, Application, ApplicationWindow, Button };
+#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")] // hide console window on Windows in release
 
-const APP_ID: &str = "org.miraj.PigeonPost";
+use eframe::egui;
 
-fn main() -> glib::ExitCode {
-    let app = Application::builder().application_id(APP_ID).build();
-    app.connect_activate(build_ui);
-    app.run()
+fn main() -> Result<(), eframe::Error> {
+    env_logger::init(); // Log to stderr (if you run with `RUST_LOG=debug`).
+    let options = eframe::NativeOptions {
+        initial_window_size: Some(egui::vec2(500.0, 240.0)),
+        ..Default::default()
+    };
+    eframe::run_native(
+        "Pigeon post",
+        options,
+        Box::new(|_cc| Box::<App>::default()),
+    )
 }
 
-fn build_ui(app: &Application) {
-    let container = gtk::Box::new(gtk::Orientation::Horizontal, 24);
+struct App {
+    url: String,
+    method: String,
+}
 
-    let menubutton = gtk::MenuButton::builder()
-        .label("GET")
-        .margin_top(12)
-        .margin_bottom(12)
-        .margin_start(12)
-        .margin_end(12)
-        .build();
+impl Default for App {
+    fn default() -> Self {
+        Self {
+            url: "".to_owned(),
+            method: "GET".to_owned()
+        }
+    }
+}
 
-    container.append(&menubutton);
-
-    let text = gtk::Entry::builder()
-        .margin_top(12)
-        .margin_bottom(12)
-        .margin_start(12)
-        .margin_end(12)
-        .placeholder_text("Enter a URL...")
-        .build();
-    text.set_width_request(700);
-
-    container.append(&text);
-
-    text.connect_activate(|text| {
-        let a = text.buffer();
-        println!("[TEXTFIELD] {}", a.text());
-    });
-
-    let button = Button::builder().label("Send")
-        .margin_top(12)
-        .margin_bottom(12)
-        .margin_start(12)
-        .margin_end(12)
-        .build();
-    container.append(&button);
-
-    button.connect_clicked(|button| {
-        button.set_label("Hello world");
-    });
-
-
-    
-    let window = ApplicationWindow::builder()
-        .application(app)
-        .title("Pigeon Post")
-        .child(&container)
-        .build();
-    window.present();
+impl eframe::App for App {
+    fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
+        let Self { url, method } = self;
+        egui::CentralPanel::default().show(ctx, |ui| {
+            ui.horizontal(|ui| {
+                egui::ComboBox::from_label("").selected_text(method.clone()).show_ui(ui, |ui| {
+                    ui.selectable_value(method, "GET".to_owned(), "GET");
+                    ui.selectable_value(method, "POST".to_owned(), "POST");
+                });
+                egui::TextEdit::singleline(url).hint_text("Enter URL").show(ui);
+                if ui.button("Send").clicked() {
+                    println!("{url}");
+                }
+            });
+        });
+    }
 }

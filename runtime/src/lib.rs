@@ -3,7 +3,7 @@ mod structs;
 use std::time::Instant;
 use futures::{ stream, StreamExt };
 use reqwest::header::{ HeaderMap, HeaderName, HeaderValue, CONTENT_TYPE };
-pub use crate::structs::{ Runtime, RequestInput, Response, Header };
+pub use crate::structs::{ Runtime, RequestInput, Response, Header, HttpMethod };
 
 impl Runtime {
     pub fn new() -> Self {
